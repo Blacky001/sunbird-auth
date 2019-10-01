@@ -34,7 +34,7 @@ node('build-slave') {
                         mkdir -p sunbird_auth_1.0v/providers
                         mkdir -p sunbird_auth_1.0v/modules/system/layers/keycloak/org/postgresql/main
                         mkdir -p sunbird_auth_1.0v/themes/sunbird/login
-                        wget https://jdbc.postgresql.org/download/postgresql-9.4.1212.jar
+                        wget https://jdbc.postgresql.org/download/postgresql-9.4.1212.jar --no-check-certificate
 			mv postgresql-9.4.1212.jar sunbird_auth_1.0v/modules/system/layers/keycloak/org/postgresql/main
                         cd keycloak/sms-provider
                         mvn package
